@@ -1,0 +1,62 @@
+version: "3.9"
+
+services:
+  ssh-demo-1:
+    build: .
+    container_name: ssh-demo-1
+    ports:
+      - "2221:22"
+
+  ssh-demo-2:
+    build: .
+    container_name: ssh-demo-2
+    ports:
+      - "2222:22"
+
+  ssh-demo-3:
+    build: .
+    container_name: ssh-demo-3
+    ports:
+      - "2223:22"
+
+  ssh-demo-4:
+    build: .
+    container_name: ssh-demo-4
+    ports:
+      - "2224:22"
+
+  ssh-demo-5:
+    build: .
+    container_name: ssh-demo-5
+    ports:
+      - "2225:22"
+
+  ssh-demo-6:
+    build: .
+    container_name: ssh-demo-6
+    ports:
+      - "2226:22"
+
+  ssh-demo-7:
+    build: .
+    container_name: ssh-demo-7
+    ports:
+      - "2227:22"
+
+  ssh-demo-8:
+    build: .
+    container_name: ssh-demo-8
+    ports:
+      - "2228:22"
+
+  ssh-demo-9:
+    build: .
+    container_name: ssh-demo-9
+    ports:
+      - "2229:22"
+
+  ssh-demo-10:
+    build: .
+    container_name: ssh-demo-10
+    ports:
+      - "2230:22"
