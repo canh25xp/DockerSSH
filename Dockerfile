@@ -1,16 +1,20 @@
 FROM ubuntu:24.04
 
-ARG USERNAME
-ARG PASSWORD
-
+# Install required packages
 RUN apt update && \
-    apt install -y openssh-server && \
+    apt install -y openssh-server python3 && \
     mkdir -p /var/run/sshd && \
-    useradd -m -s /bin/bash ${USERNAME} && \
-    echo "${USERNAME}:${PASSWORD}" | chpasswd && \
+    # SSH configuration
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
     sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
 
+# Copy users configuration
+COPY users.json /users.json
+
+# Copy entrypoint script
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 EXPOSE 22
 
-CMD ["/usr/sbin/sshd", "-D"]
+ENTRYPOINT ["/entrypoint.sh"]

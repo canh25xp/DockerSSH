@@ -1,0 +1,17 @@
+[
+  { "username": "cuong.nguyen", "password": "cuongnguyen" },
+  { "username": "cuong.nm4", "password": "cuongnm4" },
+  { "username": "doan.ng", "password": "doanng" },
+  { "username": "duc.cuong", "password": "duccuong" },
+  { "username": "giang.ngo", "password": "giangngo" },
+  { "username": "haphong.ng", "password": "haphongng" },
+  { "username": "khanh.pd", "password": "khanhpd" },
+  { "username": "manhdung.ng", "password": "manhdungng" },
+  { "username": "minhhoa.tr", "password": "minhhoatr" },
+  { "username": "oanh.tt", "password": "oanhtt" },
+  { "username": "tien.oanh", "password": "tienoanh" },
+  { "username": "vancanh.ng", "password": "vancanhng" },
+  { "username": "vu.pd", "password": "vupd" },
+  { "username": "vuong.chinh", "password": "vuongchinh" },
+  { "username": "yen.pt1", "password": "yenpt1" }
+]
