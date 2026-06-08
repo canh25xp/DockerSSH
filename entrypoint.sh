@@ -3,9 +3,6 @@
 # Read users from JSON and create them
 echo "Creating users..."
 
-# Install jq for JSON parsing
-apt-get update -qq && apt-get install -y -qq jq > /dev/null 2>&1
-
 # Parse users.json and create users
 users=$(cat /users.json)
 count=$(echo "$users" | jq length)

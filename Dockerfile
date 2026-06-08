@@ -2,7 +2,31 @@ FROM debian:unstable
 
 # Install required packages
 RUN apt update && \
-    apt install -y openssh-server jq && \
+    apt install -y \
+        bash-completion \
+        bat \
+        bottom \
+        curl \
+        duf \
+        eza \
+        fastfetch \
+        fd-find \
+        fzf \
+        gh \
+        git \
+        git-lfs \
+        httpie \
+        jq \
+        neovim \
+        nodejs \
+        npm \
+        p7zip \
+        starship \
+        tealdeer \
+        tmux \
+        zoxide \
+        openssh-server && \
+    rm -rf /var/lib/apt/lists/* && \
     mkdir -p /var/run/sshd && \
     # SSH configuration
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
