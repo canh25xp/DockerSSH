@@ -5,7 +5,7 @@ RUN apt update && \
     apt install -y \
         bash-completion \
         bat \
-        bottom \
+        btm \
         curl \
         duf \
         eza \
