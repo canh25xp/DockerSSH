@@ -18,8 +18,6 @@ RUN apt update && \
         httpie \
         jq \
         neovim \
-        nodejs \
-        npm \
         p7zip \
         starship \
         tealdeer \
