@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM debian:unstable
 
 # Install required packages
 RUN apt update && \
