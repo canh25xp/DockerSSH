@@ -2,7 +2,7 @@ FROM ubuntu:24.04
 
 # Install required packages
 RUN apt update && \
-    apt install -y openssh-server python3 && \
+    apt install -y openssh-server jq && \
     mkdir -p /var/run/sshd && \
     # SSH configuration
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \

@@ -3,30 +3,27 @@
 # Read users from JSON and create them
 echo "Creating users..."
 
+# Install jq for JSON parsing
+apt-get update -qq && apt-get install -y -qq jq > /dev/null 2>&1
+
 # Parse users.json and create users
-python3 -c "
-import json
-import subprocess
-import os
+users=$(cat /users.json)
+count=$(echo "$users" | jq length)
 
-with open('/users.json', 'r') as f:
-    users = json.load(f)
-
-for user in users:
-    username = user['username']
-    password = user['password']
+for ((i=0; i<count; i++)); do
+    username=$(echo "$users" | jq -r ".[$i].username")
+    password=$(echo "$users" | jq -r ".[$i].password")
     
     # Check if user already exists
-    result = subprocess.run(['id', username], capture_output=True, text=True)
-    if result.returncode != 0:
-        # Create user
-        subprocess.run(['useradd', '-m', '-s', '/bin/bash', username])
-        # Set password
-        subprocess.run(['chpasswd'], input=f'{username}:{password}', text=True)
-        print(f'Created user: {username}')
-    else:
-        print(f'User already exists: {username}')
-"
+    if ! id "$username" &>/dev/null; then
+        # Create user and set password
+        useradd -m -s /bin/bash "$username"
+        echo "${username}:${password}" | chpasswd
+        echo "Created user: $username"
+    else
+        echo "User already exists: $username"
+    fi
+done
 
 echo "Starting SSH daemon..."
 exec /usr/sbin/sshd -D
