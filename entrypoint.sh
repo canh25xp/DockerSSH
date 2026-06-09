@@ -7,10 +7,10 @@ echo "Creating users..."
 users=$(cat /users.json)
 count=$(echo "$users" | jq length)
 
-for ((i=0; i<count; i++)); do
+for ((i = 0; i < count; i++)); do
     username=$(echo "$users" | jq -r ".[$i].username")
     password=$(echo "$users" | jq -r ".[$i].password")
-    
+
     # Check if user already exists
     if ! id "$username" &>/dev/null; then
         # Create user and set password
