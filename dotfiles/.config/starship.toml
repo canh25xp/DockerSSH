@@ -1,0 +1,38 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+command_timeout = 3000
+scan_timeout = 15
+
+[cmd_duration]
+min_time = 1000
+show_milliseconds = true
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+
+[username]
+show_always = true
+style_user = "purple italic"
+
+[directory]
+truncate_to_repo = true
+truncation_length = 0
+
+[os]
+style = "bold blue"
+disabled = false
+
+[os.symbols]
+Android = " "
+Debian = " "
+Ubuntu = " "
+Windows = " "
+
+[status]
+disabled = false
+symbol = "✗ "
+success_symbol = ""
+format = "[$symbol$status]($style) "
+style = "red"
