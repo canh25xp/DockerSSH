@@ -40,6 +40,9 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
 # Copy users configuration
 COPY users.json /users.json
 
+# Copy dotfiles
+COPY dotfiles/ /dotfiles/
+
 # Copy entrypoint script
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh

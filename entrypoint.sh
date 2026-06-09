@@ -16,6 +16,11 @@ for ((i = 0; i < count; i++)); do
         # Create user and set password
         useradd -m -s /bin/bash "$username"
         echo "${username}:${password}" | chpasswd
+
+        # Copy bashrc to user's home directory
+        cp /dotfiles/.bashrc "/home/$username/.bashrc"
+        chown "$username:$username" "/home/$username/.bashrc"
+
         echo "Created user: $username"
     else
         echo "User already exists: $username"
