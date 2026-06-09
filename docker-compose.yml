@@ -7,3 +7,5 @@ services:
     container_name: ssh-multi-user
     ports:
       - "10022:22"
+    mem_limit: 4g
+    cpus: 2
