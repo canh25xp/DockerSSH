@@ -1,0 +1,26 @@
+# NOTE: re-read the inputrc file with C-x C-r.
+$include /etc/inputrc
+
+# Display a list of the matching files
+set show-all-if-ambiguous on
+
+# Perform partial (common) completion on the first Tab press, only start cycling full results on the second Tab press (from bash version 5)
+set menu-complete-display-prefix on
+set colored-stats on
+set completion-ignore-case on
+set completion-map-case on
+set bell-style none
+
+# Kill whole line
+"\e\e": kill-whole-line
+"\el": kill-whole-line
+
+# If there are multiple matches for completion, Tab and Shift-Tab should cycle through them all
+"\t": menu-complete
+"\e[Z": menu-complete-backward
+
+# Cycle through history based on characters already typed on the line
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\C-p": history-search-backward
+"\C-n": history-search-forward
