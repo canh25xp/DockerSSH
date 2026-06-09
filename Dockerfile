@@ -3,6 +3,7 @@ FROM debian:unstable
 # Install required packages
 RUN apt update && \
     apt install -y \
+        locales \
         bash-completion \
         bat \
         btm \
@@ -24,6 +25,9 @@ RUN apt update && \
         tmux \
         zoxide \
         openssh-server && \
+    sed -i 's/^# *en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+    locale-gen && \
+    update-locale LANG=en_US.UTF-8 && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p /var/run/sshd && \
     # SSH configuration
