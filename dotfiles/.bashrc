@@ -111,3 +111,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+if command -v starship &>/dev/null; then
+  eval "$(starship init bash)"
+fi
