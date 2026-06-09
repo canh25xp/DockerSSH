@@ -6,6 +6,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     apt-get update && \
     apt-get install -y --no-install-recommends \
         locales \
+        adb \
         bash-completion \
         bat \
         btm \
@@ -20,6 +21,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
         git-lfs \
         httpie \
         jq \
+        lf \
         neovim \
         p7zip \
         starship \
