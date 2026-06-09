@@ -17,9 +17,9 @@ for ((i = 0; i < count; i++)); do
         useradd -m -s /bin/bash "$username"
         echo "${username}:${password}" | chpasswd
 
-        # Copy bashrc to user's home directory
-        cp /dotfiles/.bashrc "/home/$username/.bashrc"
-        chown "$username:$username" "/home/$username/.bashrc"
+        # Copy all dotfiles (including hidden files) to user's home directory
+        cp -a /dotfiles/. "/home/$username/"
+        chown -R "$username:$username" "/home/$username/"
 
         echo "Created user: $username"
     else
