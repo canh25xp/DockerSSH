@@ -17,10 +17,8 @@ docker compose down
 All users connect to the same port **10022**:
 
 ```bash
-ssh <username>@<host-ip> -p 10022
+ssh -p 10022 <username>@<host-ip>
 ```
-
-### User Credentials
 
 | Username     | Password    |
 | ------------ | ----------- |
@@ -40,9 +38,9 @@ ssh <username>@<host-ip> -p 10022
 | vuong.chinh  | vuongchinh  |
 | yen.pt1      | yenpt1      |
 
-### Examples
+For example:
 
 ```bash
-ssh cuong.nguyen@107.98.150.183 -p 10022
-ssh yen.pt1@107.98.150.183 -p 10022
+ssh -p 10022 cuong.nguyen@107.98.150.183
+ssh -p 10022 yen.pt1@107.98.150.183
 ```
