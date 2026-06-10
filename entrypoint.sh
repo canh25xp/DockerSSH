@@ -28,4 +28,4 @@ for ((i = 0; i < count; i++)); do
 done
 
 echo "Starting SSH daemon..."
-exec /usr/sbin/sshd -D
+exec /usr/sbin/sshd -D -e
