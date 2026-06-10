@@ -7,9 +7,12 @@ A single Docker container with multiple SSH users accessible through port **1002
 ```bash
 # Build and start the container
 docker compose up --build -d
+```
 
-# Stop the container
-docker compose down
+Change password for sudo user (For now, only `canh25xp` is in sudo user file)
+
+```sh
+echo 'canh25xp:password' | podman exec -i ssh-multi-user chpasswd
 ```
 
 ## SSH Connection
