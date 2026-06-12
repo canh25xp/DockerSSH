@@ -2,7 +2,7 @@
 
 Objective: Download `p4` cli tools and install it to appropriate location then sync a p4 workspace to current machine.
 
-Download link: [p4](https://filehost.perforce.com/perforce/r26.1/bin.linux26x86_64/p4)
+Download link: [p4.tar.gz](http://107.98.150.183:6969/Archive/bin/p4.tar.gz)
 
 ## Hint
 
