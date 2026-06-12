@@ -18,4 +18,17 @@ p4 -V # Check executable
 exit # Done
 ```
 
-So with just this simple test, we have check if user know to use simple linux commands: `ls`, `mv`, `cat`, `echo`, ...
+So with just this simple test, we have check if user know to use simple linux commands:
+
+- `cd`
+- `ls`
+- `mv`
+- `rm`
+- `pwd`
+- `cat`
+- `tar`
+- `echo`
+- `curl`
+- `exit`
+- `chmod`
+- `source`
