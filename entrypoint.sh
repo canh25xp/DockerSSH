@@ -19,6 +19,10 @@ for ((i = 0; i < count; i++)); do
 
         # Copy all dotfiles (including hidden files) to user's home directory
         cp -a /dotfiles/. "/home/$username/"
+
+        # Copy test README to user's home directory
+        mkdir -p "/home/$username/test"
+        cp /test/REAME.md "/home/$username/test/README.md"
         chown -R "$username:$username" "/home/$username/"
 
         echo "Created user: $username"
