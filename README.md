@@ -47,3 +47,11 @@ For example:
 ssh -p 10022 cuong.nguyen@107.98.150.183
 ssh -p 10022 yen.pt1@107.98.150.183
 ```
+
+> [!NOTE]
+> If encounter the **man-in-the-middle attack** warning.
+> Just know that this is problem mean the container has reset the last time you logged in, hence the warning.
+>
+> ```sh
+> ssh-keygen -f $HOME/.ssh/known_hosts -R '[107.98.150.183]:10022'
+> ```
