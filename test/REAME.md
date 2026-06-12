@@ -6,20 +6,23 @@ Download link: [p4.tar.gz](http://107.98.150.183:6969/Archive/bin/p4.tar.gz)
 
 ## Hint
 
-1. Use `curl` to download `p4` to current machine.
+1. Download `p4.tar.gz` using `curl`
 2. Move it to `~/.local/bin`
-3. Change permission to **executable**
-4. Ensure `~/.local/bin` is added to `PATH` environment
+3. Extract it using `tar`
+4. Add **executable** permission
+5. Ensure `~/.local/bin` is added to `PATH` environment
 
 ## Solution
 
 ```sh
 pwd # Where are we ?
-curl -LO https://filehost.perforce.com/perforce/r26.1/bin.linux26x86_64/p4 # Download the p4 binary
+curl -LO http://107.98.150.183:6969/Archive/bin/p4.tar.gz # Download the p4 binary
 ls -la # Check downloaded binary
 mkdir -p ~/.local/bin # Create directory for binaries.
-mv p4 ~/.local/bin # Move binary to user binaries directory.
+mv p4.tar.gz ~/.local/bin # Move binary to user binaries directory.
 cd ~/.local/bin # Change directory
+tar zxvf p4.tar.gz
+rm p4.tar.gz
 chmod +x p4 # Add executable permission for the binary
 echo $PATH # Check if local bin exist
 cat ~/.profile # Check if profile has already export PATH
