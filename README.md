@@ -1,4 +1,4 @@
-# Multi-User SSH Container
+# Linux playground
 
 A single Docker container with multiple SSH users accessible through port **10022**.
 
