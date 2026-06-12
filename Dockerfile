@@ -1,4 +1,4 @@
-FROM ghcr.io/canh25xp/dotfiles-debian:minimal
+FROM ghcr.io/canh25xp/dotfiles-debian:minimal-v2.0.2
 
 USER root
 
