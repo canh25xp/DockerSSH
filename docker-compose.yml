@@ -1,10 +1,10 @@
 version: "3.9"
 
 services:
-  ssh-multi-user:
+  playground:
     build:
       context: .
-    container_name: ssh-multi-user
+    container_name: playground
     ports:
       - "10022:22"
     mem_limit: 4g

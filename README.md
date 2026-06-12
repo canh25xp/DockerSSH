@@ -12,7 +12,7 @@ docker compose up --build -d
 Change password for sudo user (For now, only `canh25xp` is in sudo user file)
 
 ```sh
-echo 'canh25xp:password' | podman exec -i ssh-multi-user chpasswd
+echo 'vancanh.ng:password' | podman exec -i playground chpasswd
 ```
 
 ## SSH Connection
