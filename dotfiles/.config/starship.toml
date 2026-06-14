@@ -24,6 +24,9 @@ truncation_length = 0
 style = "bold blue"
 disabled = false
 
+[container]
+disabled = true
+
 [os.symbols]
 Android = " "
 Debian = " "
